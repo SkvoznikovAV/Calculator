@@ -16,6 +16,6 @@
     <string name="_equal">=</string>
     <string name="_c">C</string>
     <string name="division">/</string>
-    <string name="x">x</string>
+    <string name="x">*</string>
     <string name="erase"><![CDATA[<]]></string>
 </resources>
