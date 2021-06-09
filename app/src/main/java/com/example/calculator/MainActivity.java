@@ -75,13 +75,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setBtnPlusClickListener() {
-        findViewById(R.id.btn_plus).setOnClickListener(v -> {
-            if (calcField.getText().length()==0) return;
-
-            calc.setInMem(calcField.getText().toString(),CalcOperation.PLUS);
-            setFields();
-        });
+    private void setInMem(CalcOperation calcoper){
+        calc.setInMem(calcField.getText().toString(),calcoper);
+        setFields();
     }
 
     private void setFields(){
@@ -89,12 +85,19 @@ public class MainActivity extends AppCompatActivity {
         calcField.setText(calc.getCalcField());
     }
 
+    private void setBtnPlusClickListener() {
+        findViewById(R.id.btn_plus).setOnClickListener(v -> {
+            if (calcField.getText().length()==0) return;
+
+            setInMem(CalcOperation.PLUS);
+        });
+    }
+
     private void setBtnMinusClickListener() {
         findViewById(R.id.btn_minus).setOnClickListener(v -> {
             if (calcField.getText().length()==0) return;
 
-            calc.setInMem(calcField.getText().toString(),CalcOperation.MINUS);
-            setFields();
+            setInMem(CalcOperation.MINUS);
         });
     }
 
@@ -102,8 +105,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_div).setOnClickListener(v -> {
             if (calcField.getText().length()==0) return;
 
-            calc.setInMem(calcField.getText().toString(),CalcOperation.DIVISION);
-            setFields();
+            setInMem(CalcOperation.DIVISION);
         });
     }
 
@@ -111,8 +113,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_mult).setOnClickListener(v -> {
             if (calcField.getText().length()==0) return;
 
-            calc.setInMem(calcField.getText().toString(),CalcOperation.MULTIPLY);
-            setFields();
+            setInMem(CalcOperation.MULTIPLY);
         });
     }
 

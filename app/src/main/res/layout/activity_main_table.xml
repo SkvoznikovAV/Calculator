@@ -15,262 +15,246 @@
         android:gravity="center">
 
         <TableRow
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">>
+            android:gravity="center">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/memField"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/button_margin"
-                android:layout_marginLeft="@dimen/button_margin"
-                android:layout_marginRight="@dimen/button_margin"
+                android:layout_height="match_parent"
+                android:background="@color/white"
                 android:layout_span="4"
-                android:background="@drawable/edit_text_style"
                 android:gravity="end"
+                android:layout_margin="@dimen/button_margin"
                 android:textColor="@color/grey"
                 android:textSize="@dimen/edit_text_size" />
         </TableRow>
 
         <TableRow
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">>
+            android:gravity="center">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/calcField"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@color/white"
                 android:textSize="@dimen/edit_text_size"
-                android:background="@drawable/edit_text_style"
                 android:gravity="end"
                 android:layout_span="4"
-                android:layout_margin="@dimen/button_margin"
                 android:textColor="@color/black"
-                android:layout_marginLeft="@dimen/button_margin"
-                android:layout_marginRight="@dimen/button_margin"/>
+                />
         </TableRow>
 
         <TableRow
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">>
+            android:gravity="center">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_c"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_c"
-                android:background="@drawable/button_border"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_div"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/division"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_mult"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/x"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_del"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/erase"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
-
+                />
         </TableRow>
 
         <TableRow
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center">>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_7"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_7"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_8"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_8"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_9"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_9"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_minus"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/minus"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
         </TableRow>
 
         <TableRow
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_4"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_5"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_6"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_plus"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/plus"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
-
+                />
         </TableRow>
 
         <TableRow
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_1"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_2"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_3"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_equal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_equal"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
         </TableRow>
 
         <TableRow
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_0"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:layout_span="2"
-                android:background="@drawable/button_border"
                 android:text="@string/_0"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_dot"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_border"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:text="@string/_point"
-                android:textColor="@color/black"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
-            <androidx.appcompat.widget.AppCompatButton
+                />
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/button_margin"
                 android:visibility="invisible"
-                android:background="@drawable/button_border"
                 android:textSize="@dimen/button_number_text_size"
-                android:layout_margin="@dimen/button_margin"/>
+                />
         </TableRow>
     </TableLayout>
 </FrameLayout>
