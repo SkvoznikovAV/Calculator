@@ -3,6 +3,7 @@ package com.example.calculator;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -14,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView memField;
     private Calc calc;
     private final static String keyCalc = "calc";
+    private static final String NameSharedPreference = "CALC";
+    private static final String AppTheme = "APP_THEME";
+
+    private static final int MyThemeCodeStyle = 0;
+    private static final int DarkThemeCodeStyle = 1;
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle instanceState) {
@@ -31,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme(R.style.MyTheme));
         setContentView(R.layout.activity_main);
 
         calcField=findViewById(R.id.calcField);
@@ -46,6 +53,18 @@ public class MainActivity extends AppCompatActivity {
         setBtnEqualClickListener();
         setBtnCClickListener();
         setBtnDotClickListener();
+        setBtnThemeClickListener();
+    }
+
+    private void setBtnThemeClickListener() {
+        findViewById(R.id.btn_theme).setOnClickListener(v -> {
+            if (getCodeStyle(MyThemeCodeStyle) == MyThemeCodeStyle) {
+                setAppTheme(DarkThemeCodeStyle);
+            } else {
+                setAppTheme(MyThemeCodeStyle);
+            }
+            recreate();
+        });
     }
 
     private void setBtnCClickListener() {
@@ -110,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setBtnMultiplyClickListener() {
-        findViewById(R.id.btn_mult).setOnClickListener(v -> {
+        findViewById(R.id.btn_multiply).setOnClickListener(v -> {
             if (calcField.getText().length()==0) return;
 
             setInMem(CalcOperation.MULTIPLY);
@@ -161,5 +180,32 @@ public class MainActivity extends AppCompatActivity {
         valuesNumButton.put(R.id.btn_9,"9");
 
         return valuesNumButton;
+    }
+
+    private int getAppTheme(int codeStyle) {
+        return codeStyleToStyleId(getCodeStyle(codeStyle));
+    }
+
+    private void setAppTheme(int codeStyle) {
+        SharedPreferences sharedPref = getSharedPreferences(NameSharedPreference, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(AppTheme, codeStyle);
+        editor.apply();
+    }
+
+    private int codeStyleToStyleId(int codeStyle){
+        switch(codeStyle){
+            case MyThemeCodeStyle:
+                return R.style.MyTheme;
+            case DarkThemeCodeStyle:
+                return R.style.AppThemeDark;
+            default:
+                return R.style.MyTheme;
+        }
+    }
+
+    private int getCodeStyle(int codeStyle){
+        SharedPreferences sharedPref = getSharedPreferences(NameSharedPreference, MODE_PRIVATE);
+        return sharedPref.getInt(AppTheme, codeStyle);
     }
 }
