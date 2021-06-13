@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="button_number_text_size">20sp</dimen>
-    <dimen name="edit_text_size">25sp</dimen>
+    <dimen name="button_number_text_size">15sp</dimen>
+    <dimen name="edit_text_size">20sp</dimen>
     <dimen name="button_margin">2sp</dimen>
-    <dimen name="textSize">25sp</dimen>
+    <dimen name="textSize">15sp</dimen>
 </resources>

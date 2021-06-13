@@ -3,8 +3,10 @@ package com.example.calculator;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -17,9 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private final static String keyCalc = "calc";
     private static final String NameSharedPreference = "CALC";
     private static final String AppTheme = "APP_THEME";
-
-    private static final int MyThemeCodeStyle = 0;
-    private static final int DarkThemeCodeStyle = 1;
+    private static final int REQUEST_CODE_SETTING_ACTIVITY = 99;
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle instanceState) {
@@ -53,17 +53,33 @@ public class MainActivity extends AppCompatActivity {
         setBtnEqualClickListener();
         setBtnCClickListener();
         setBtnDotClickListener();
-        setBtnThemeClickListener();
+        setBtnSettingsClickListener();
     }
 
-    private void setBtnThemeClickListener() {
-        findViewById(R.id.btn_theme).setOnClickListener(v -> {
-            if (getCodeStyle(MyThemeCodeStyle) == MyThemeCodeStyle) {
-                setAppTheme(DarkThemeCodeStyle);
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != REQUEST_CODE_SETTING_ACTIVITY) {
+            super.onActivityResult(requestCode, resultCode, data);
+            return;
+        }
+
+        if (resultCode == RESULT_OK){
+            int retCodeStyle = data.getIntExtra(Const.SETTINGS_THEME_STYLE,-1);
+
+            if (retCodeStyle == Const.DarkThemeCodeStyle) {
+                setAppTheme(Const.DarkThemeCodeStyle);
             } else {
-                setAppTheme(MyThemeCodeStyle);
+                setAppTheme(Const.MyThemeCodeStyle);
             }
             recreate();
+        }
+    }
+
+    private void setBtnSettingsClickListener() {
+        findViewById(R.id.btn_settings).setOnClickListener(v -> {
+            Intent runSettings = new Intent(MainActivity.this, SettingsActivity.class);
+
+            runSettings.putExtra(Const.SETTINGS_THEME_STYLE,getCodeStyle(Const.MyThemeCodeStyle));
+            startActivityForResult(runSettings, REQUEST_CODE_SETTING_ACTIVITY);
         });
     }
 
@@ -195,9 +211,9 @@ public class MainActivity extends AppCompatActivity {
 
     private int codeStyleToStyleId(int codeStyle){
         switch(codeStyle){
-            case MyThemeCodeStyle:
+            case Const.MyThemeCodeStyle:
                 return R.style.MyTheme;
-            case DarkThemeCodeStyle:
+            case Const.DarkThemeCodeStyle:
                 return R.style.AppThemeDark;
             default:
                 return R.style.MyTheme;

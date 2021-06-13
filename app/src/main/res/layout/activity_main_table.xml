@@ -23,12 +23,11 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/memField"
+                style="@style/MyTextViewStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_span="4"
                 android:gravity="end"
-                style="@style/MyTextViewStyle"
-                />
+                android:layout_span="4" />
         </TableRow>
 
         <TableRow
@@ -59,7 +58,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/_c"
                 style="@style/MyButtonStyle"
-                />
+            />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_div"
@@ -225,10 +224,10 @@
                 style="@style/MyButtonStyle"
                 />
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_theme"
+                android:id="@+id/btn_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/btn_theme"
+                android:text="@string/btn_settings"
                 style="@style/MyButtonStyle"
                 />
         </TableRow>

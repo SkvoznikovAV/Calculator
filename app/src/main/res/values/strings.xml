@@ -20,4 +20,7 @@
     <string name="erase"><![CDATA[<]]></string>
     <string name="contDesc" />
     <string name="btn_theme">theme</string>
+    <string name="btn_settings">settings</string>
+    <string name="name_ligth_theme">Светлая тема</string>
+    <string name="name_dark_theme">Темная тема</string>
 </resources>
