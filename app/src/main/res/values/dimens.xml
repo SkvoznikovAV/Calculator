@@ -4,4 +4,5 @@
     <dimen name="edit_text_size">20sp</dimen>
     <dimen name="button_margin">2sp</dimen>
     <dimen name="textSize">15sp</dimen>
+    <dimen name="btn_settings_text_size">10sp</dimen>
 </resources>
