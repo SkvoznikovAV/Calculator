@@ -10,12 +10,14 @@
     <string name="_8">8</string>
     <string name="_9">9</string>
     <string name="_0">0</string>
-    <string name="_point">,</string>
+    <string name="_dot">,</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
     <string name="_equal">=</string>
     <string name="_c">C</string>
     <string name="division">/</string>
-    <string name="x">*</string>
+    <string name="x">x</string>
     <string name="erase"><![CDATA[<]]></string>
+    <string name="contDesc" />
+    <string name="btn_theme">theme</string>
 </resources>
